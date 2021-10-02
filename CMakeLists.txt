@@ -3,7 +3,7 @@
 # Distributed under the Boost Software License, Version 1.0.
 # https://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 3.5...3.16)
+cmake_minimum_required(VERSION 3.14...3.21)
 
 project(boost_pfr VERSION "${BOOST_SUPERPROJECT_VERSION}" LANGUAGES CXX)
 
@@ -12,9 +12,12 @@ add_library(Boost::pfr ALIAS boost_pfr)
 
 target_include_directories(boost_pfr INTERFACE include)
 
+enable_testing()
+
 if(BUILD_TESTING AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test/CMakeLists.txt")
 
   add_subdirectory(test)
 
 endif()
 
+add_subdirectory(example)

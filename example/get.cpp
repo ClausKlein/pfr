@@ -29,7 +29,7 @@ auto& r2 = boost::pfr::get<1>(f); // accessing field with index 1, returns refer
 int main() {
     if (r1 != 777) return 1;
     if (r2 != '!') return 2;
-    
+
     r1 = 42;
     r2 = 'A';
 
